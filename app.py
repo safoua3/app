@@ -42,8 +42,8 @@ def predict():
         return jsonify({
         'probability': proba*100, 
         'Pret': Pret,
-        'shap_values': shap_values[1][0].tolist(),
-        #'shap_values': shap_values[0].tolist(),  # Utilisez shap_values[0] pour la classe principale (première classe)
+        #'shap_values': shap_values[1][0].tolist(),
+        'shap_values': shap_values[0].tolist(),  # Utilisez shap_values[0] pour la classe principale (première classe)
         'feature_names': sample.columns.tolist(),
         'feature_values': sample.values[0].tolist()
     })
